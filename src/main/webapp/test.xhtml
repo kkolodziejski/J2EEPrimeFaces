@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
+   <h:head>
+
+   </h:head>
+   <h:body>
+      <h1>
+         TESTING
+      </h1>
+      <h:panelGrid columns="2">
+         <p:outputLabel for="jsfCompSuite" value="Component Suite" />
+         <p:selectOneRadio id="jsfCompSuite" value="Posok">
+            <f:selectItem itemLabel="ICEfaces" itemValue="ICEfaces" />
+            <f:selectItem itemLabel="RichFaces" itemValue="Richfaces" />
+         </p:selectOneRadio>
+      </h:panelGrid>
+      <h:form>
+         <p:menu>
+            <p:submenu label="File">
+               <p:menuitem value="Open"></p:menuitem>
+               <p:menuitem value="Edit"></p:menuitem>
+               <p:separator/>
+               <p:menuitem value="Exit"></p:menuitem>
+            </p:submenu>
+            <p:submenu label="Help">
+               <p:menuitem value="About Primefaces"></p:menuitem>
+               <p:menuitem value="Contact Us"></p:menuitem>
+               <p:separator/>
+               <p:menuitem value="Help"></p:menuitem>
+            </p:submenu>
+         </p:menu>
+      </h:form>
+   </h:body>
+</f:view>
+
+</html>
