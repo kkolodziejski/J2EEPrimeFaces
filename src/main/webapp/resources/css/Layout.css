@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    padding: 1rem;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header {
+    width: 90vw;
+    top: 0;
+}
+
+.Footer {
+    bottom: 0;
+    width: 90vw;
+}

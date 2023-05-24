@@ -1,4 +1,4 @@
-package pl.kkolodziejski.j2eeprimefaces;
+package pl.kkolodziejski.primefaces;
 
 import java.io.*;
 import javax.servlet.http.*;
@@ -19,6 +19,7 @@ public class HelloServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
+        out.println("<a href=\"index.xhtml\">Main Page</a>");
         out.println("</body></html>");
     }
 

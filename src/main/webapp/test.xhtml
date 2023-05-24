@@ -8,9 +8,12 @@
 
 <f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
    <h:head>
-
+      <title>Subpage test</title>
    </h:head>
    <h:body>
+      <ui:composition template="template/common/Layout.xhtml">
+         <ui:define name="content">
+
       <h1>
          TESTING
       </h1>
@@ -24,19 +27,41 @@
       <h:form>
          <p:menu>
             <p:submenu label="File">
-               <p:menuitem value="Open"></p:menuitem>
-               <p:menuitem value="Edit"></p:menuitem>
+               <p:menuitem value="Open"/>
+               <p:menuitem value="Edit"/>
                <p:separator/>
-               <p:menuitem value="Exit"></p:menuitem>
+               <p:menuitem value="Exit"/>
             </p:submenu>
             <p:submenu label="Help">
-               <p:menuitem value="About Primefaces"></p:menuitem>
-               <p:menuitem value="Contact Us"></p:menuitem>
+               <p:menuitem value="About Primefaces"/>
+               <p:menuitem value="Contact Us"/>
                <p:separator/>
-               <p:menuitem value="Help"></p:menuitem>
+               <p:menuitem value="Help"/>
             </p:submenu>
          </p:menu>
       </h:form>
+      <p:dataTable value="#{viewKits.kits}" var="kit">
+         <p:column>
+            <f:facet name="header">
+               <h:outputText value="ID"/>
+            </f:facet>
+            <h:outputText value="#{kit.id}"/>
+         </p:column>
+         <p:column>
+            <f:facet name="header">
+               <h:outputText value="Name"/>
+            </f:facet>
+            <h:outputText value="#{kit.name}"/>
+         </p:column>
+         <p:column>
+            <f:facet name="header">
+               <h:outputText value="Piece Count"/>
+            </f:facet>
+            <h:outputText value="#{kit.pieceCount}"/>
+         </p:column>
+      </p:dataTable>
+         </ui:define>
+      </ui:composition>
    </h:body>
 </f:view>
 
