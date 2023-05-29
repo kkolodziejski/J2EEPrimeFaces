@@ -1,0 +1,7 @@
+services:
+  postgresql:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: j2ee
+      POSTGRES_USER: kkolodziejski
+      POSTGRES_PASSWORD: guest
