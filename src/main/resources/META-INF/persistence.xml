@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
-    <persistence-unit name="primefaces-app-persistence-manager" transaction-type="RESOURCE_LOCAL">
-        <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/j2ee"/>
-            <property name="javax.persistence.jdbc.user" value="kkolodziejski"/>
-            <property name="javax.persistence.jdbc.password" value="guest"/>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-        </properties>
+    <persistence-unit name="default">
+
     </persistence-unit>
 </persistence>
