@@ -1,7 +1,6 @@
 package pl.kkolodziejski.primefaces.bean;
 
-import pl.kkolodziejski.primefaces.dao.AccountDao;
-import pl.kkolodziejski.primefaces.model.Account;
+import pl.kkolodziejski.primefaces.entities.Account;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;

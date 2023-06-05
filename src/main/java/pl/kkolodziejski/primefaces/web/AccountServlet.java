@@ -1,7 +1,7 @@
 package pl.kkolodziejski.primefaces.web;
 
 import pl.kkolodziejski.primefaces.dao.AccountDao;
-import pl.kkolodziejski.primefaces.model.Account;
+import pl.kkolodziejski.primefaces.entities.Account;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

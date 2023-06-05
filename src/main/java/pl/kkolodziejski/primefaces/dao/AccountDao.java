@@ -3,7 +3,7 @@ package pl.kkolodziejski.primefaces.dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import pl.kkolodziejski.primefaces.model.Account;
+import pl.kkolodziejski.primefaces.entities.Account;
 import pl.kkolodziejski.primefaces.util.AccountUtil;
 
 import java.util.List;

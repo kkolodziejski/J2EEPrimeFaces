@@ -12,7 +12,20 @@
                 TESTING
             </h1>
             <p:column>
-                BODY
+                <h:dataTable var="account" value="#{accountManagedBean.accounts}">
+                    <h:column>
+                        <f:facet name="header">ID</f:facet>
+                        #{account.id}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Name</f:facet>
+                        #{account.name}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Phone</f:facet>
+                        #{account.phone}
+                    </h:column>
+                </h:dataTable>
             </p:column>
             </ui:define>
         </ui:composition>

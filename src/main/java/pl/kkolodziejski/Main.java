@@ -1,7 +1,7 @@
 package pl.kkolodziejski;
 
 import pl.kkolodziejski.primefaces.dao.AccountDao;
-import pl.kkolodziejski.primefaces.model.Account;
+import pl.kkolodziejski.primefaces.entities.Account;
 
 import java.util.List;
 

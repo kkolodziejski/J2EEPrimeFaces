@@ -1,7 +1,7 @@
 package pl.kkolodziejski.primefaces.view;
 
 import pl.kkolodziejski.primefaces.dao.AccountDao;
-import pl.kkolodziejski.primefaces.model.Account;
+import pl.kkolodziejski.primefaces.entities.Account;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;

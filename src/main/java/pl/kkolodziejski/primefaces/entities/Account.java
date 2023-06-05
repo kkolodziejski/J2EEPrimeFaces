@@ -1,4 +1,4 @@
-package pl.kkolodziejski.primefaces.model;
+package pl.kkolodziejski.primefaces.entities;
 
 import lombok.*;
 
@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "accounts")
+@Table(name = "account")
 public class Account {
 
     @Id
