@@ -11,7 +11,7 @@
    <ui:composition template="template/common/Layout.xhtml">
       <ui:define name="content">
          Accounts: <br/>
-         <h:dataTable value="#{bean.accounts}" var="account">
+         <h:dataTable value="#{accountManagedBean.accounts}" var="account">
             #{account.name}
          </h:dataTable>
       </ui:define>
