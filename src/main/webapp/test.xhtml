@@ -40,7 +40,7 @@
             </p:submenu>
          </p:menu>
       </h:form>
-      <p:dataTable value="#{viewKits.kits}" var="kit">
+      <p:dataTable value="#{viewProducts.products}" var="kit">
          <p:column>
             <f:facet name="header">
                <h:outputText value="ID"/>
@@ -52,12 +52,6 @@
                <h:outputText value="Name"/>
             </f:facet>
             <h:outputText value="#{kit.name}"/>
-         </p:column>
-         <p:column>
-            <f:facet name="header">
-               <h:outputText value="Piece Count"/>
-            </f:facet>
-            <h:outputText value="#{kit.pieceCount}"/>
          </p:column>
       </p:dataTable>
          </ui:define>

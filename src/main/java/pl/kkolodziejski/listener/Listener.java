@@ -11,7 +11,6 @@ public class Listener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent contextEvent) {
         System.out.println("Context created");
         context = contextEvent.getServletContext();
-        context.setAttribute("TEST", "TEST_VALUE");
     }
 
     public void contextDestroyed(ServletContextEvent contextEvent) {

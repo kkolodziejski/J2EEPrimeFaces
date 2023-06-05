@@ -6,14 +6,14 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-   <h:body>
-      <h:form>
-         <p:menubar>
-            <p:menuitem value="Main page" url="index.xhtml"/>
-            <p:menuitem value="Hibernate test" url="view_accounts.jsp"/>
-            <p:menuitem value="Accounts" url="accounts.xhtml"/>
-            <p:menuitem value="Register" url="createAccount.xhtml"/>
-         </p:menubar>
-      </h:form>
-   </h:body>
+<f:view>
+    <p:dataTable id="products" var="product" value="#{dtContextMenuView.products}" rowKey="#{product.id}" lazy="true">
+       <p:column headerText="ID">
+          <h:outputText value="#{product.id}"/>
+       </p:column>
+       <p:column headerText="Name">
+          <h:outputText value="#{product.name}"/>
+       </p:column>
+    </p:dataTable>
+</f:view>
 </html>

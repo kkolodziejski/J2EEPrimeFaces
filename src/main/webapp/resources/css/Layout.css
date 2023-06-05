@@ -1,6 +1,5 @@
 html, body {
     margin: 0;
-    height: 100%;
 }
 
 body {
@@ -10,6 +9,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+    min-height: 100vh;
 }
 
 .Header {
@@ -18,6 +19,10 @@ body {
 }
 
 .Footer {
-    bottom: 0;
     width: 90vw;
+    bottom: 0;
+}
+
+.Content {
+    width: 80vw;
 }

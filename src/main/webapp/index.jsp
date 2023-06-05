@@ -1,9 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Main page - JSP</title>
-</head>
-<body>
+<%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
 <% response.sendRedirect("index.xhtml"); %>
-</body>
-</html>
+<mt:pageTemplate title="Main Page">
+    <jsp:attribute name="content">
+        Main page
+    </jsp:attribute>
+</mt:pageTemplate>

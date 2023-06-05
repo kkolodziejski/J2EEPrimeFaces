@@ -6,14 +6,16 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
+<f:view>
    <h:body>
-      <h:form>
-         <p:menubar>
-            <p:menuitem value="Main page" url="index.xhtml"/>
-            <p:menuitem value="Hibernate test" url="view_accounts.jsp"/>
-            <p:menuitem value="Accounts" url="accounts.xhtml"/>
-            <p:menuitem value="Register" url="createAccount.xhtml"/>
-         </p:menubar>
-      </h:form>
+   <ui:composition template="template/common/Layout.xhtml">
+      <ui:define name="content">
+         Accounts: <br/>
+         <h:dataTable value="#{bean.accounts}" var="account">
+            #{account.name}
+         </h:dataTable>
+      </ui:define>
+   </ui:composition>
    </h:body>
+</f:view>
 </html>
