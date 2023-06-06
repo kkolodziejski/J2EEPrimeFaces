@@ -13,7 +13,7 @@ import java.util.List;
 public class AccountModel {
 
     private SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-    private List<Account> accounts2 = new ArrayList<>();
+    private List<Account> accounts = new ArrayList<>();
 
     @SuppressWarnings({"rawtypes", "unchecked"})
     public List<Account> findAll() {
@@ -27,11 +27,11 @@ public class AccountModel {
             accounts = query.getResultList();
             transaction.commit();
             for (Account account : accounts) {
-                accounts2.add(account);
+                this.accounts.add(account);
                 System.out.println(account.getName());
             }
         } catch (Exception e) {
-            accounts = null;
+            this.accounts = null;
             if (transaction != null) {
                 transaction.rollback();
             }
@@ -39,6 +39,23 @@ public class AccountModel {
             assert session != null;
             session.close();
         }
-        return accounts2;
+        return this.accounts;
+    }
+
+    public void persistAccount(Account account) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.persist(account);
+            transaction.commit();
+        } catch (Exception e) {
+            assert transaction != null;
+            transaction.rollback();
+        } finally {
+            assert session != null;
+            session.close();
+        }
     }
 }

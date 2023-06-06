@@ -11,9 +11,26 @@
    <ui:composition template="template/common/Layout.xhtml">
       <ui:define name="content">
          Accounts: <br/>
-         <h:dataTable value="#{accountManagedBean.accounts}" var="account">
-            #{account.name}
-         </h:dataTable>
+         <p:dataTable value="#{accountManagedBean.accounts}" var="account">
+            <p:column>
+               <f:facet name="header">
+                  <h:outputText value="ID"/>
+               </f:facet>
+               <h:outputText value="#{account.id}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header">
+                  <h:outputText value="Name"/>
+               </f:facet>
+               <h:outputText value="#{account.name}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header">
+                  <h:outputText value="Phone"/>
+               </f:facet>
+               <h:outputText value="#{account.phone}"/>
+            </p:column>
+         </p:dataTable>
       </ui:define>
    </ui:composition>
    </h:body>

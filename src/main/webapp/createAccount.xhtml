@@ -10,13 +10,16 @@
    <h:body>
       <ui:composition template="template/common/Layout.xhtml">
          <ui:define name="content">
-            <p:panel>
-               <h:outputText value="Name:"/>
-               <h:inputText value="#{accountForm.name}"/>
-               <h:outputText value="Phone:"/>
-               <h:inputText value="#{accountForm.phone}"/>
-               <p:button onclick="#{accountForm.createAccount()}}"/>
-            </p:panel>
+            <h:form>
+               <h:panelGrid columns="2">
+                  <h:outputText value="Enter name"/>
+                  <h:inputText value="#{accountManagedBean.name}"/>
+                  <h:outputText value="Enter phone"/>
+                  <h:inputText value="#{accountManagedBean.phone}"/>
+                  <h:outputText value="Register"/>
+                  <h:commandButton action="#{accountManagedBean.addAccount()}" value="Register"/>
+               </h:panelGrid>
+            </h:form>
          </ui:define>
       </ui:composition>
    </h:body>

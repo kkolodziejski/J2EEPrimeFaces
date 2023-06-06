@@ -9,24 +9,28 @@
         <ui:composition template="template/common/Layout.xhtml">
             <ui:define name="content">
             <h1>
-                TESTING
+                Accounts
             </h1>
-            <p:column>
-                <h:dataTable var="account" value="#{accountManagedBean.accounts}">
-                    <h:column>
-                        <f:facet name="header">ID</f:facet>
-                        #{account.id}
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Name</f:facet>
-                        #{account.name}
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Phone</f:facet>
-                        #{account.phone}
-                    </h:column>
-                </h:dataTable>
-            </p:column>
+                <p:dataTable value="#{accountManagedBean.accounts}" var="account">
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="ID"/>
+                        </f:facet>
+                        <h:outputText value="#{account.id}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Name"/>
+                        </f:facet>
+                        <h:outputText value="#{account.name}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Phone"/>
+                        </f:facet>
+                        <h:outputText value="#{account.phone}"/>
+                    </p:column>
+                </p:dataTable>
             </ui:define>
         </ui:composition>
 
