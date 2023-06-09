@@ -1,27 +1,17 @@
-package pl.kkolodziejski.primefaces.demo;
+package pl.kkolodziejski.primefaces.beans;
 
 import pl.kkolodziejski.primefaces.entities.Account;
 import pl.kkolodziejski.primefaces.model.AccountModel;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import java.util.List;
 
 @SessionScoped
-@ManagedBean(name = "accountManagedBean")
-public class AccountManagedBean {
+@ManagedBean(name = "accountForm")
+public class AccountForm {
 
     private String name = "";
     private String phone = "";
-    private List<Account> accounts;
-
-    public List<Account> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
-    }
 
     public String getName() {
         return name;
@@ -45,13 +35,7 @@ public class AccountManagedBean {
         account.setName(name);
         account.setPhone(phone);
         accountModel.persistAccount(account);
-        this.accounts.add(account);
         return "success";
-//        return "/index.xhtml?faces-redirect=true"; // lepszy nowszy sposob bez grzebania w facesconfig
     }
 
-    public AccountManagedBean() {
-        AccountModel accountModel = new AccountModel();
-        this.accounts = accountModel.findAll();
-    }
 }

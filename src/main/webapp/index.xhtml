@@ -5,13 +5,17 @@
       xmlns:jsf="http://xmlns.jcp.org/jsf"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
+<f:metadata>
+    <f:event type="preRenderView" listener="#{accountList.refreshAccountList()}" />
+</f:metadata>
+
 
         <ui:composition template="template/common/Layout.xhtml">
             <ui:define name="content">
             <h1>
                 Accounts
             </h1>
-                <p:dataTable value="#{accountManagedBean.accounts}" var="account">
+                <p:dataTable value="#{accountList.accounts}" var="account">
                     <p:column>
                         <f:facet name="header">
                             <h:outputText value="ID"/>
@@ -29,6 +33,10 @@
                             <h:outputText value="Phone"/>
                         </f:facet>
                         <h:outputText value="#{account.phone}"/>
+                    </p:column>
+                    <p:column>
+                        <p:linkButton outcome="account_view?id=#{account.id}" value="View: #{account.id}"/>
+                        <p:linkButton outcome="accounts?id=#{account.id}" value="Edit: #{account.id}"/>
                     </p:column>
                 </p:dataTable>
             </ui:define>

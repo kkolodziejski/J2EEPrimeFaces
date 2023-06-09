@@ -3,6 +3,7 @@ package pl.kkolodziejski.primefaces.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter

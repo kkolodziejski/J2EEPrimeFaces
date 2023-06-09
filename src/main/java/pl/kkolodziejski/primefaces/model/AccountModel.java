@@ -15,21 +15,17 @@ public class AccountModel {
     private final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     private List<Account> accounts = new ArrayList<>();
 
-    @SuppressWarnings({"rawtypes", "unchecked"})
     public List<Account> findAll() {
-        List<Account> accounts = null;
+        List<Account> accounts;
         Session session = null;
         Transaction transaction = null;
         try {
             session = sessionFactory.openSession();
             transaction = session.beginTransaction();
-            Query query = session.createQuery("from Account ", Account.class);
+            Query<Account> query = session.createQuery("from Account ", Account.class);
             accounts = query.getResultList();
             transaction.commit();
-            for (Account account : accounts) {
-                this.accounts.add(account);
-                System.out.println(account.getName());
-            }
+            this.accounts.addAll(accounts);
         } catch (Exception e) {
             this.accounts = null;
             if (transaction != null) {
@@ -42,6 +38,19 @@ public class AccountModel {
         return this.accounts;
     }
 
+    public Account findById(Long id) {
+        Account account;
+        Session session = null;
+        try {
+            session = sessionFactory.openSession();
+            account = session.get(Account.class, id);
+        } finally {
+            assert session != null;
+            session.close();
+        }
+        return account;
+    }
+
     public void persistAccount(Account account) {
         Session session = null;
         Transaction transaction = null;
@@ -49,6 +58,22 @@ public class AccountModel {
             session = sessionFactory.openSession();
             transaction = session.beginTransaction();
             session.persist(account);
+            transaction.commit();
+        } catch (Exception e) {
+            assert transaction != null;
+            transaction.rollback();
+        } finally {
+            assert session != null;
+            session.close();
+        }
+    }
+
+    public void editAccount(Long id) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
             transaction.commit();
         } catch (Exception e) {
             assert transaction != null;
