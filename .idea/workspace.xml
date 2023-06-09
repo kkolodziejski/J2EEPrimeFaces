@@ -9,14 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a542a3d9-39d3-4072-b863-ad71d8434edd" name="Changes" comment="Form refresh fix">
+    <list default="true" id="a542a3d9-39d3-4072-b863-ad71d8434edd" name="Changes" comment="Account view">
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/demo/AccountManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/beans/AccountList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/entities/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/model/AccountModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/model/AccountModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/accounts.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/accounts.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/createAccount.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/createAccount.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/beans/AccountView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/beans/AccountView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/account_view.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/account_view.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/contextMenu.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/createAccount.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/create_account.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/common/Header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/common/Header.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view_accounts.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +256,8 @@
       <workItem from="1686036544910" duration="4000" />
       <workItem from="1686045586860" duration="5506000" />
       <workItem from="1686304339185" duration="31000" />
-      <workItem from="1686306953062" duration="6610000" />
+      <workItem from="1686306953062" duration="6640000" />
+      <workItem from="1686337080608" duration="3620000" />
     </task>
     <task id="LOCAL-00001" summary="PrimeFaces working">
       <created>1684872551157</created>
@@ -332,11 +336,35 @@
       <option name="project" value="LOCAL" />
       <updated>1686308852783</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Account view todo">
+      <created>1686316088412</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686316088412</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PrimeFaces working" />
@@ -350,6 +378,8 @@
     <MESSAGE value="Hibernate is working!" />
     <MESSAGE value="Creating bean through form" />
     <MESSAGE value="Form refresh fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form refresh fix" />
+    <MESSAGE value="Account view todo" />
+    <MESSAGE value="Account view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Account view" />
   </component>
 </project>

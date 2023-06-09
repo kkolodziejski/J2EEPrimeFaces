@@ -10,6 +10,7 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean(name = "accountView")
 public class AccountView {
 
+    private String accountId;
     private Account account;
 
     public Account getAccount() {
@@ -20,9 +21,17 @@ public class AccountView {
         this.account = account;
     }
 
-    public void loadAccountData(String id) {
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    public void loadAccountData() {
         AccountModel accountModel = new AccountModel();
-        this.account = accountModel.findById(Long.valueOf(id));
+        this.account = accountModel.findById(Long.valueOf(accountId));
     }
 
     public AccountView() {
