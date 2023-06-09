@@ -12,7 +12,7 @@ import java.util.List;
 
 public class AccountModel {
 
-    private SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+    private final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     private List<Account> accounts = new ArrayList<>();
 
     @SuppressWarnings({"rawtypes", "unchecked"})

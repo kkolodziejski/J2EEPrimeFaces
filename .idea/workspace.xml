@@ -9,15 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a542a3d9-39d3-4072-b863-ad71d8434edd" name="Changes" comment="Hibernate is working!">
+    <list default="true" id="a542a3d9-39d3-4072-b863-ad71d8434edd" name="Changes" comment="Creating bean through form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/demo/AccountManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/demo/AccountManagedBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/model/AccountModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kkolodziejski/primefaces/model/AccountModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/accounts.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/accounts.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/createAccount.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/createAccount.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +248,9 @@
       <workItem from="1685966282042" duration="18888000" />
       <workItem from="1685991895559" duration="7882000" />
       <workItem from="1686036544910" duration="4000" />
-      <workItem from="1686045586860" duration="5388000" />
+      <workItem from="1686045586860" duration="5506000" />
+      <workItem from="1686304339185" duration="31000" />
+      <workItem from="1686306953062" duration="1805000" />
     </task>
     <task id="LOCAL-00001" summary="PrimeFaces working">
       <created>1684872551157</created>
@@ -317,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686000238515</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Creating bean through form">
+      <created>1686053151800</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686053151800</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +338,7 @@
     <MESSAGE value="Unable to render data from db" />
     <MESSAGE value="Another tutorial not working" />
     <MESSAGE value="Hibernate is working!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate is working!" />
+    <MESSAGE value="Creating bean through form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating bean through form" />
   </component>
 </project>

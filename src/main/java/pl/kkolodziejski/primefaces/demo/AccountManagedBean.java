@@ -47,6 +47,7 @@ public class AccountManagedBean {
         accountModel.persistAccount(account);
         this.accounts.add(account);
         return "success";
+//        return "/index.xhtml?faces-redirect=true"; // lepszy nowszy sposob bez grzebania w facesconfig
     }
 
     public AccountManagedBean() {
