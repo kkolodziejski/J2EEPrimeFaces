@@ -13,11 +13,11 @@
             <h:form>
                <h:panelGrid columns="2">
                   <h:outputText value="Enter name"/>
-                  <h:inputText value="#{accountForm.name}"/>
+                  <h:inputText value="#{accountList.name}"/>
                   <h:outputText value="Enter phone"/>
-                  <h:inputText value="#{accountForm.phone}"/>
+                  <h:inputText value="#{accountList.phone}"/>
                   <h:outputText value="Register"/>
-                  <h:commandButton action="#{accountForm.addAccount()}" value="Register"/>
+                  <h:commandButton action="#{accountList.addAccount()}" value="Register"/>
                </h:panelGrid>
             </h:form>
          </ui:define>

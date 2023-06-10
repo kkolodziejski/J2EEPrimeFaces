@@ -52,7 +52,7 @@ public class AccountModel {
         return account;
     }
 
-    public void persistAccount(Account account) {
+    public boolean persistAccount(Account account) {
         Session session = null;
         Transaction transaction = null;
         try {
@@ -63,10 +63,12 @@ public class AccountModel {
         } catch (Exception e) {
             assert transaction != null;
             transaction.rollback();
+            return false;
         } finally {
             assert session != null;
             session.close();
         }
+        return true;
     }
 
     public void editAccount(Long id) {
