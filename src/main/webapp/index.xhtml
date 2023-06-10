@@ -5,10 +5,6 @@
       xmlns:jsf="http://xmlns.jcp.org/jsf"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
-<f:metadata>
-    <f:event type="preRenderView" listener="#{accountList.refreshAccountList()}" />
-</f:metadata>
-
 
         <ui:composition template="template/common/Layout.xhtml">
             <ui:define name="content">
@@ -37,6 +33,12 @@
                     <p:column>
                         <p:linkButton outcome="account_view?id=#{account.id}" value="View: #{account.id}"/>
                         <p:linkButton outcome="accounts?id=#{account.id}" value="Edit: #{account.id}"/>
+                        <p:commandButton value="Delete"
+                                         action="#{accountList.deleteAccount}" >
+                            <f:setPropertyActionListener
+                                    target="#{accountList.accountToDelete}"
+                                    value="#{account}" />
+                        </p:commandButton>
                     </p:column>
                 </p:dataTable>
             </ui:define>

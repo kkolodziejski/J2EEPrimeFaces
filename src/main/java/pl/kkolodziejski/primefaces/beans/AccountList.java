@@ -11,7 +11,18 @@ import java.util.List;
 @ManagedBean(name = "accountList")
 public class AccountList {
 
-    private List<Account> accounts;
+    private Account accountToDelete;
+    private final AccountModel accountModel = new AccountModel();
+
+    private List<Account> accounts = accountModel.findAll();
+
+    public Account getAccountToDelete() {
+        return accountToDelete;
+    }
+
+    public void setAccountToDelete(Account accountToDelete) {
+        this.accountToDelete = accountToDelete;
+    }
 
     public List<Account> getAccounts() {
         return accounts;
@@ -21,13 +32,11 @@ public class AccountList {
         this.accounts = accounts;
     }
 
-    public void refreshAccountList() {
-        AccountModel accountModel = new AccountModel();
-        this.accounts = accountModel.findAll();
+    public void deleteAccount() {
+        boolean result = accountModel.deleteAccount(accountToDelete);
+        if (result) {
+            accounts.remove(accountToDelete);
+        }
     }
 
-
-    public AccountList() {
-        refreshAccountList();
-    }
 }

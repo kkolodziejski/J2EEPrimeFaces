@@ -11,28 +11,28 @@
    <ui:composition template="template/common/Layout.xhtml">
       <ui:define name="content">
          Accounts: <br/>
-         <h:outputText value="#{param['id']}" />
-
-         <p:dataTable value="#{accountList.accounts}" var="account">
-            <p:column>
-               <f:facet name="header">
-                  <h:outputText value="ID"/>
-               </f:facet>
-               <h:outputText value="#{account.id}"/>
-            </p:column>
-            <p:column>
-               <f:facet name="header">
-                  <h:outputText value="Name"/>
-               </f:facet>
-               <h:outputText value="#{account.name}"/>
-            </p:column>
-            <p:column>
-               <f:facet name="header">
-                  <h:outputText value="Phone"/>
-               </f:facet>
-               <h:outputText value="#{account.phone}"/>
-            </p:column>
-         </p:dataTable>
+         <h2>JSF edit data to data table example.</h2>
+         <h:form>
+            <h:dataTable
+                    value="#{accountList.accounts}" var="account">
+               <h:column>
+                  <f:facet name="header">Name</f:facet>
+                  <h:outputText value="#{account.name}" />
+               </h:column>
+               <h:column>
+                  <f:facet name="header">Phone</f:facet>
+                  <h:outputText value="#{account.phone}" />
+               </h:column>
+               <h:column>
+                  <h:commandButton value="Delete"
+                                   action="#{accountList.deleteAccount}" >
+                     <f:setPropertyActionListener
+                             target="#{accountList.accountToDelete}"
+                             value="#{account}" />
+                  </h:commandButton>
+               </h:column>
+            </h:dataTable>
+         </h:form>
       </ui:define>
    </ui:composition>
    </h:body>

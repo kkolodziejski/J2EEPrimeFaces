@@ -9,6 +9,7 @@ import pl.kkolodziejski.primefaces.util.HibernateUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class AccountModel {
 
@@ -82,5 +83,24 @@ public class AccountModel {
             assert session != null;
             session.close();
         }
+    }
+
+    public boolean deleteAccount(Account account) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.remove(account);
+            transaction.commit();
+        } catch (Exception e) {
+            assert transaction != null;
+            transaction.rollback();
+            return false;
+        } finally {
+            assert session != null;
+            session.close();
+        }
+        return true;
     }
 }
