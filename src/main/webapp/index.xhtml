@@ -33,7 +33,7 @@
                     </p:column>
                     <p:column>
                         <p:linkButton outcome="account_view?id=#{account.id}" value="View: #{account.id}"/>
-                        <p:linkButton outcome="accounts?id=#{account.id}" value="Edit: #{account.id}"/>
+                        <p:linkButton outcome="edit_account?id=#{account.id}" value="Edit: #{account.id}"/>
                         <p:commandButton value="Delete"
                                          action="#{accountList.deleteAccount}" >
                             <f:setPropertyActionListener

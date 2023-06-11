@@ -71,20 +71,23 @@ public class AccountModel {
         return true;
     }
 
-    public void editAccount(Long id) {
+    public boolean editAccount(Account account) {
         Session session = null;
         Transaction transaction = null;
         try {
             session = sessionFactory.openSession();
             transaction = session.beginTransaction();
+            session.update(account);
             transaction.commit();
         } catch (Exception e) {
             assert transaction != null;
             transaction.rollback();
+            return false;
         } finally {
             assert session != null;
             session.close();
         }
+        return true;
     }
 
     public boolean deleteAccount(Account account) {

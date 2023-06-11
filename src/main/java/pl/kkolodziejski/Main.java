@@ -14,18 +14,18 @@ import java.util.Objects;
 public class Main {
 
     public static void main(String[] args) {
-        String hql = "";
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        Account accountToDelete = new Account();
-        accountToDelete.setId(49L);
-        session.beginTransaction();
-//        session.persist(new Account("pepedziobak", "+743625"));
-//        session.getTransaction().commit();
-//        session.createQuery("delete from Account where name = :DziobakRefresh");
-        session.delete(accountToDelete);
-        List<Account> accounts = session.createQuery("from Account ", Account.class).getResultList();
-        session.close();
-//        accounts.removeIf(account -> Objects.equals(account.getName(), "Mike"));
+        List<Account> accounts = new ArrayList<>();
+        accounts.add(new Account("dziobak1", "dziobafone"));
+        accounts.add(new Account("dziobak2", "dziobafone"));
+        accounts.add(new Account("dziobak3", "dziobafone"));
+        accounts.add(new Account("dziobak4", "dziobafone"));
+        accounts.replaceAll(account -> {
+            if (account.getName().equals("dziobak2")) {
+                account.setName("changedDziobak");
+                return account;
+            };
+            return account;
+        });
         for (Account account : accounts) {
             System.out.println(account.getName());
         }

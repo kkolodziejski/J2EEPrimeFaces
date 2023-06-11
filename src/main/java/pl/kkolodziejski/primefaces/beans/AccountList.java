@@ -18,6 +18,7 @@ public class AccountList {
     private final AccountModel accountModel = new AccountModel();
 
     private Account accountToDelete;
+    private Account accountToEdit;
     private String name = "";
     private String phone = "";
     private List<Account> accounts = accountModel.findAll();
@@ -30,6 +31,26 @@ public class AccountList {
         boolean result = accountModel.persistAccount(newAccount);
         if (result) {
             accounts.add(newAccount);
+            return "success";
+        }
+        return "failure";
+    }
+
+
+
+    public String editAccount() {
+        accountToEdit.setName(name);
+        accountToEdit.setPhone(phone);
+        boolean result = accountModel.editAccount(accountToEdit);
+        if (result) {
+            accounts.replaceAll(account -> {
+                if (account.getId().equals(accountToEdit.getId())) {
+                    account.setName(name);
+                    account.setPhone(phone);
+                    return account;
+                };
+                return account;
+            });
             return "success";
         }
         return "failure";
